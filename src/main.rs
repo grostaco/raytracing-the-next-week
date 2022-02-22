@@ -85,7 +85,7 @@ fn random_scene() -> HittableList {
 }
 
 fn ray_color(ray: &Ray, world: &dyn Hittable, depth: u32) -> Color {
-    if depth <= 0 {
+    if depth == 0 {
         return Color::zeros();
     }
     if let Some(rec) = world.hit(ray, 0.001, INFINITY) {

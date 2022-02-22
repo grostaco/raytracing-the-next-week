@@ -66,9 +66,9 @@ impl Vec3 {
         g = (g * scale).sqrt();
         b = (b * scale).sqrt();
         
-        write!(
+        writeln!(
             image,
-            "{} {} {}\n",
+            "{} {} {}",
             (r.clamp(0.0, 0.999) * 256.0) as u32,
             (g.clamp(0.0, 0.999) * 256.0) as u32,
             (b.clamp(0.0, 0.999) * 256.0) as u32
